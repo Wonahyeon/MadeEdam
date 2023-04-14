@@ -15,7 +15,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+  <!-- SWIPER(8버전으로 진행) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
   <link rel="stylesheet" href="./css/main.css">
+
+  <!-- SWIPER(8버전으로 진행) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  
   <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -49,13 +56,29 @@
     <div class="main-header">
       <div class="inner">
         <!-- 인증 안내 -->
-        <div class="main-header-notice">
+        <!-- <div class="main-header-notice">
           <a href="javascript:void(0)">
             <img src="./images/header-notice-1.jpg" alt="무즈 2기 회원 인증 안내">
           </a>
           <a href="javascript:void(0)">
             <img src="./images/header-notice-2.jpg" alt="유애나 6기 회원 인증 안내">
           </a>
+        </div> -->
+
+        <!-- 인증 안내 슬라이드 라이브러리 사용 -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">
+                <img src="./images/header-notice-1.jpg" alt="무즈 2기 회원 인증 안내">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0)">
+                <img src="./images/header-notice-2.jpg" alt="유애나 6기 회원 인증 안내">
+              </a>
+            </div>
+          </div>
         </div>
         <!-- 로고 -->
         <div class="logo">
@@ -75,9 +98,30 @@
       <div class="inner">
         <ul class="bottom-header-category">
           <li><a href="javascript:void(0)">ALL</a></li>
-          <li><a href="javascript:void(0)">IU</a></li>
-          <li><a href="javascript:void(0)">Shin Sae Kyeong</a></li>
-          <li><a href="javascript:void(0)">WOODZ</a></li>
+          <li><a href="javascript:void(0)">IU</a>
+            <ul class="sub-category sub-category--iu">
+              <li><a href="javascript:void(0)">IUAENA</a></li>
+              <li><a href="javascript:void(0)">2023 New Year</a></li>
+              <li><a href="javascript:void(0)">2022 The Golden Hour</a></li>
+              <li><a href="javascript:void(0)">strawberry moon</a></li>
+              <li><a href="javascript:void(0)">LILAC</a></li>
+              <li><a href="javascript:void(0)">April, 2020</a></li>
+              <li><a href="javascript:void(0)">2019 Love, poem</a></li>
+              <li><a href="javascript:void(0)">The Present I, II</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0)">Shin Sae Kyeong</a>
+            <ul class="sub-category sub-category--sk">
+              <li><a href="javascript:void(0)">2023 New Year</a></li>
+              <li><a href="javascript:void(0)">Seasons Greetings</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0)">WOODZ</a>
+            <ul class="sub-category sub-category--wz">
+              <li><a href="javascript:void(0)">2023 New Year</a></li>
+              <li><a href="javascript:void(0)">Seasons Greetings</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
