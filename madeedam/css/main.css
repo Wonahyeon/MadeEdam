@@ -1,0 +1,113 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  height: 3000px;
+}
+a {
+  text-decoration: none;
+  color: #999;
+}
+/* 인라인 요소 -> 블록 요소  */
+/* baseline으로 인한 문제 해결 */
+img {
+  display: block;
+}
+.inner {
+  /* width: 1100px;/ */
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HEADER */
+/* 상단 헤더 */
+header .top-header {
+  position: relative;
+  border-bottom: 1px solid #e2e2e2;
+}
+header .top-header > .inner {
+  height: 50px; /* top-header border 속성 넣으려면 길이 지정 필요 */
+}
+header .top-header ul, li:last-child span > strong {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .top-header ul > li {
+  padding: 16px 12px;
+}
+
+header .top-header ul > li:hover > a {
+  color: #333;
+}
+
+/* 상단 헤더 우측 */
+header .top-header .top-header-right {
+  right: 0;
+}
+
+
+/* 메인 헤더 */
+header .main-header {
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+header .main-header > .inner {
+  height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .main-header .main-header-notice {
+  display: flex;
+  width: 280px;
+  height: 80px;
+  overflow: hidden;
+}
+header .main-header .main-header-search {
+  position: relative;
+}
+header .main-header .main-header-search > input {
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  padding: 9px 11px;
+}
+header .main-header .main-header-search > input:hover {
+  border: 1px solid #e4e724;
+}
+header .main-header .main-header-search > input:focus {
+  border: 1px solid #e2e2e2;
+}
+header .main-header .main-header-search > input:hover + .material-icons{
+  color: #333;
+}
+header .main-header .main-header-search > .material-icons {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  bottom: 0;
+  margin: auto;
+  color: #999;
+  cursor: pointer;
+}
+
+/* 하단 헤더 */
+header .bottom-header .inner {
+  height: 40px;
+}
+header .bottom-header .bottom-header-category {
+  display: flex;
+}
+header .bottom-header ul > li {
+  padding: 10px 12px;
+}
+
+header .bottom-header ul > li:hover > a {
+  color: #333;
+}
+
