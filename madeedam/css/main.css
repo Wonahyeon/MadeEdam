@@ -1,5 +1,5 @@
 body {
-  font-family:'Black Han Sans', 'Nanum Gothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
@@ -92,13 +92,13 @@ header .main-header .main-header-search {
 header .main-header .main-header-search > input {
   border: 1px solid #e2e2e2;
   border-radius: 3px;
+  outline: none;
   padding: 9px 11px;
 }
-header .main-header .main-header-search > input:hover {
+header .main-header .main-header-search > input:hover,
+header .main-header .main-header-search > input:focus
+ {
   border: 1px solid #e4e724;
-}
-header .main-header .main-header-search > input:focus {
-  border: 1px solid #e2e2e2;
 }
 header .main-header .main-header-search > input:hover + .material-icons{
   color: #333;
@@ -141,12 +141,15 @@ header .bottom-header .bottom-header-category > li > a {
 header .bottom-header .bottom-header-category > li:hover > a {
   font-weight: bold;
 }
+
+/* 서브 카테고리 */
 header .bottom-header .bottom-header-category .sub-category {
   box-sizing: border-box;
   background-color: #fff;
   display: block;
   padding: 10px 10px;
   position: absolute;
+  z-index: 4; /* main-visual 위로 올리기 위함 */
   width: 200px;
   display: none;
 }
@@ -174,4 +177,20 @@ header .bottom-header .bottom-header-category #artist-2:hover > .sub-category {
 }
 header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
   transform: translate(-76px,16px);
+}
+/* absolute를 이용한 수평 가운데 배치 */
+
+
+/* VISUAL */
+/* main-visual */
+.visual img {
+  width: 100%;
+}
+.visual .swiper {
+
+  overflow: hidden;
+}
+.visual .swiper-button-prev,
+.visual .swiper-button-next {
+  height: 0;
 }

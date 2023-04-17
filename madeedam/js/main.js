@@ -18,7 +18,10 @@
 // imgSlides(); // 기본적으로 첫 번째 이미지 표시
 
 // 메인 헤더 좌측에 notice 이미지 슬라이드 swiper 라이브러리 이용
-new Swiper('.swiper',{
+// new 키워드로 Swiper 객체를 생성 => 슬라이드 기능을 생성
+// new Swiper(선택자, 옵션:{});
+
+new Swiper('.main-header .swiper',{
   pagination: {
     el: '.swiper-pagination'
   },
@@ -26,3 +29,20 @@ new Swiper('.swiper',{
   loop: true,
   autoplay:true,
 });
+
+new Swiper('.visual .swiper',{
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 5000
+  },
+});
+
+// main-visual button 기능
+
+
+
+// main-visual에 hover했을 때 실행
