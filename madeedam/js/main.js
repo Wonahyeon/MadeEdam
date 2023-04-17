@@ -19,7 +19,10 @@
 
 // 메인 헤더 좌측에 notice 이미지 슬라이드 swiper 라이브러리 이용
 new Swiper('.swiper',{
+  pagination: {
+    el: '.swiper-pagination'
+  },
   direction: 'horizontal',
   loop: true,
   autoplay:true,
-})
+});

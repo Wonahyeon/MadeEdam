@@ -1,10 +1,18 @@
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family:'Black Han Sans', 'Nanum Gothic', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
 
   height: 3000px;
+  /* background-color: plum; */
+  min-width: 320px;
+  width: 100% !important;
+}
+h1 {
+  font-size: 50px;
+  color: plum;
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -16,8 +24,9 @@ img {
   display: block;
 }
 .inner {
-  /* width: 1100px;/ */
-  max-width: 1100px;
+  max-width: 1200px;
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -25,13 +34,13 @@ img {
 /* HEADER */
 /* 상단 헤더 */
 header .top-header {
-  position: relative;
-  border-bottom: 1px solid #e2e2e2;
+  font-size: 12px;
+  box-shadow: 0px 1px 1px 0 rgba(226, 226, 226, 1);
 }
 header .top-header > .inner {
-  height: 50px; /* top-header border 속성 넣으려면 길이 지정 필요 */
+  height: 39px; /* top-header border 속성 넣으려면 길이 지정 필요 */
 }
-header .top-header ul, li:last-child span > strong {
+header .top-header ul,li:last-child span > strong {
   display: flex;
   position: absolute;
   top: 0;
@@ -39,7 +48,7 @@ header .top-header ul, li:last-child span > strong {
   margin: auto;
 }
 header .top-header ul > li {
-  padding: 16px 12px;
+  padding: 10px 12px;
 }
 
 header .top-header ul > li:hover > a {
@@ -55,7 +64,6 @@ header .top-header .top-header-right {
 /* 메인 헤더 */
 header .main-header {
   position: relative;
-  border-bottom: 1px solid #333;
 }
 header .main-header > .inner {
   height: 148px;
@@ -63,11 +71,20 @@ header .main-header > .inner {
   justify-content: space-between;
   align-items: center;
 }
-header .main-header .main-header-notice {
+header .main-header .swiper {
   display: flex;
   width: 280px;
   height: 80px;
   overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+header .main-header .swiper .swiper-pagination {
+  position: absolute;
+  bottom: -0.5px;
+}
+:root {
+  --swiper-theme-color: #444;
 }
 header .main-header .main-header-search {
   position: relative;
@@ -98,14 +115,63 @@ header .main-header .main-header-search > .material-icons {
 
 /* 하단 헤더 */
 header .bottom-header {
-  background-color: purple;
+  /* background-color: purple; */
+  background-color: #fff;
+  border-top: 1px #222 solid;
+  border-bottom: 1px #e2e2e2 solid;
+}
+header .bottom-header .inner {
+  height: 54px;
+  /* background-color: #999; */
 }
 header .bottom-header .bottom-header-category {
-  background-color: rgb(241, 178, 241);
+  /* background-color: rgb(241, 178, 241); */
   display: flex;
   position: absolute;
-  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
 }
 header .bottom-header .bottom-header-category > li {
-  padding: 5px 10px;
+  padding: 16px 20px;
+}
+header .bottom-header .bottom-header-category > li > a {
+  color: #333;
+}
+header .bottom-header .bottom-header-category > li:hover > a {
+  font-weight: bold;
+}
+header .bottom-header .bottom-header-category .sub-category {
+  box-sizing: border-box;
+  background-color: #fff;
+  display: block;
+  padding: 10px 10px;
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+header .bottom-header .bottom-header-category li:hover .sub-category {
+  display: block;
+}
+header .bottom-header .bottom-header-category .sub-category > li {
+  margin: 10px 10px;
+  text-align: center;
+}
+header .bottom-header .bottom-header-category .sub-category > li > a {
+  font-size: 12px;
+}
+
+header .bottom-header .bottom-header-category .sub-category > li:hover > a {
+  color: #333;
+}
+
+/* 카테고리별 서브 카테고리가 각각 상위 카테고리 가운데로 자리 잡게 */
+header .bottom-header .bottom-header-category #artist-1:hover > .sub-category {
+  transform: translate(-96px,16px);
+}
+header .bottom-header .bottom-header-category #artist-2:hover > .sub-category {
+  transform: translate(-50.1px,16px);
+}
+header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
+  transform: translate(-76px,16px);
 }
