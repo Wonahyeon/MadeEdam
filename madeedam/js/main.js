@@ -23,7 +23,8 @@
 
 new Swiper('.main-header .swiper',{
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   },
   direction: 'horizontal',
   loop: true,
@@ -31,18 +32,18 @@ new Swiper('.main-header .swiper',{
 });
 
 new Swiper('.visual .swiper',{
-  pagination: {
-    el: '.swiper-pagination'
-  },
   direction: 'horizontal',
   loop: true,
   autoplay: {
     delay: 5000
   },
+  pagination: {
+    el: '.visual .swiper-pagination',
+    clickable: true
+  },
+  navigation: { 
+    prevEl: '.visual .swiper-button-prev',
+    nextEl: '.visaul .swiper-button-next'
+  }
 });
 
-// main-visual button 기능
-
-
-
-// main-visual에 hover했을 때 실행

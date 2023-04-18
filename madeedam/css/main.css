@@ -77,7 +77,6 @@ header .main-header .swiper {
   height: 80px;
   overflow: hidden;
   margin: 0;
-  position: relative;
 }
 header .main-header .swiper .swiper-pagination {
   position: absolute;
@@ -134,6 +133,7 @@ header .bottom-header .bottom-header-category {
 }
 header .bottom-header .bottom-header-category > li {
   padding: 16px 20px;
+  position: relative;
 }
 header .bottom-header .bottom-header-category > li > a {
   color: #333;
@@ -178,19 +178,49 @@ header .bottom-header .bottom-header-category #artist-2:hover > .sub-category {
 header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
   transform: translate(-76px,16px);
 }
-/* absolute를 이용한 수평 가운데 배치 */
 
 
 /* VISUAL */
-/* main-visual */
 .visual img {
   width: 100%;
 }
 .visual .swiper {
-
-  overflow: hidden;
+  height: 600px;
 }
-.visual .swiper-button-prev,
+.visual .swiper-button-prev {
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-25% - 50px);
+}
 .visual .swiper-button-next {
-  height: 0;
+  position: absolute;
+  right: 50%;
+  margin-right: calc(-25% - 50px);
+}
+.visual .swiper-button-prev::after,
+.visual .swiper-button-next::after {
+  display: none;
+}
+.visual .material-icons {
+  color: #a8a8a8e8;
+  opacity: 0;
+}
+.visual:hover .material-icons {
+  opacity: 1;
+}
+.visual .swiper-button-prev .material-icons {
+  animation: fadeOutLeft;
+  animation-duration: 1s;
+}
+.visual .swiper-button-next .material-icons {
+  animation: fadeOutRight;
+  animation-duration: 1s;
+}
+.visual:hover .swiper-button-prev .material-icons {
+  animation: fadeInLeft;
+  animation-duration: 1s;
+}
+.visual:hover .swiper-button-next .material-icons {
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
