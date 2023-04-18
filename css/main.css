@@ -226,3 +226,34 @@ header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
   animation: fadeInRight;
   animation-duration: 1s;
 }
+
+/* NEW PRODUCTS */
+.new-products {
+  /* background-color: olive; */
+}
+.new-products .inner {
+  height: 610px;
+}
+.new-products .new-products-title {
+  font-size: 24px;
+  text-align: center;
+  display: block;
+  margin: 100px 0 40px;
+}
+.new-products .item__wrap {
+  display: flex;
+  background-color: olivedrab;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.new-products .item__box {
+  height: 540px;
+}
+.new-products .item__box .item__name,
+.new-products .item__box .item__price
+ {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  margin: 20px 5px;
+}
