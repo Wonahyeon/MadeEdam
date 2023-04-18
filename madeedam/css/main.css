@@ -181,12 +181,15 @@ header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
 
 
 /* VISUAL */
-.visual img {
-  width: 100%;
+.visual .swiper-wrapper {
+  /* width: 100vw; */
+  
 }
 .visual .swiper {
   height: 600px;
+  position: relative;
 }
+
 .visual .swiper-button-prev {
   position: absolute;
   left: 50%;

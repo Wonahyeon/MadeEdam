@@ -43,7 +43,7 @@ new Swiper('.visual .swiper',{
   },
   navigation: { 
     prevEl: '.visual .swiper-button-prev',
-    nextEl: '.visaul .swiper-button-next'
+    nextEl: '.visual .swiper-button-next'
   }
 });
 
