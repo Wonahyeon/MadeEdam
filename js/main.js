@@ -27,16 +27,20 @@ new Swiper('.main-header .swiper',{
     clickable: true
   },
   direction: 'horizontal',
+  effect: 'fade',
   loop: true,
-  autoplay:true,
+  autoplay: {
+    delay: 4000
+  },
 });
 
 new Swiper('.visual .swiper',{
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 5000
+    delay: 7000
   },
+  effect: 'fade',
   pagination: {
     el: '.visual .swiper-pagination',
     clickable: true

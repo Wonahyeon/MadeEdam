@@ -72,24 +72,21 @@ header .main-header > .inner {
   justify-content: space-between;
   align-items: center;
 }
+:root {
+  --swiper-theme-color: #444;
+}
 header .main-header .swiper {
-  flex: 1;
   display: flex;
   width: 280px;
   height: 80px;
   overflow: hidden;
   margin: 0;
+  position: relative;
 }
 header .main-header .swiper .swiper-pagination {
   position: absolute;
   bottom: -0.5px;
 }
-:root {
-  --swiper-theme-color: #444;
-}
-/* .main-header .icon {
-  display: none;
-} */
 header .main-header .main-header-search {
   position: relative;
 }
@@ -103,10 +100,10 @@ header .main-header .main-header-search > input:hover,
 header .main-header .main-header-search > input:focus {
   border: 1px solid #e4e724;
 }
-header .main-header .main-header-search > input:hover + .material-icons{
+header .main-header .main-header-search > input:hover+ .material-icons {
   color: #333;
 }
-header .main-header .main-header-search > .material-icons {
+header .main-header .main-header-search  .material-icons {
   position: absolute;
   right: 3px;
   top: 5px;
@@ -251,8 +248,6 @@ header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* display: block; */
-  margin: 30px 5px 0;
 }
 
 /* PRODUCT HOVER
@@ -282,15 +277,21 @@ img 스케일 증가시키는데 정해진 영역 밖으로 흘러넘치는 요�
   width: 100%;
   height: calc(610px - 100%);
 }
+.new-products .product-box .product-info > h4 {
+  margin: 30px 5px 0;
+}
 
 /* BEST PRODUCT */
 .best-products .inner {
-  height: calc(70px + 248px);
+  margin-bottom: 70px;
+}
+.best-products .product-wrap {
+  height: 216px;
 }
 .best-products .product-box {
   width: 18%;
   position: relative;
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
 }
 .best-products .product-item {
   position: absolute;
@@ -298,17 +299,31 @@ img 스케일 증가시키는데 정해진 영역 밖으로 흘러넘치는 요�
 .best-products .product-box img {
   width: 100%;
 }
-/* TODO best product info item이랑 겹치게 하기 */
+/* best product info item이랑 겹치게 하기 */
 .best-products .product-info {
   width: 100%;
-  height: 179px;
+  height: 216px;
   position: absolute;
-  bottom: 20px;
-  background-color: #444;
+  background-color: #44444485;
+  opacity: 0;
+  transition: opacity .4s;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+.best-products .product-info > h4 {
+  color: #fff;
+}
+.best-products .product-info > h4 + h4 {
+  margin-top: 20px;
 }
 
 /*BEST PRODUCT HOVER */
-
+.best-products .product-box:hover .product-info {
+  opacity: 1;
+}
 
 
 /* MAIN FIXED*/
