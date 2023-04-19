@@ -24,6 +24,7 @@ img {
   display: block;
 }
 .inner {
+  /* background-color: #e4e724; */
   max-width: 1200px;
   min-width: 320px;
   width: 100%;
@@ -72,6 +73,7 @@ header .main-header > .inner {
   align-items: center;
 }
 header .main-header .swiper {
+  flex: 1;
   display: flex;
   width: 280px;
   height: 80px;
@@ -84,6 +86,9 @@ header .main-header .swiper .swiper-pagination {
 }
 :root {
   --swiper-theme-color: #444;
+}
+.main-header .icon {
+  display: none;
 }
 header .main-header .main-header-search {
   position: relative;
@@ -226,34 +231,75 @@ header .bottom-header .bottom-header-category #artist-3:hover > .sub-category {
   animation: fadeInRight;
   animation-duration: 1s;
 }
-
-/* NEW PRODUCTS */
-.new-products {
-  /* background-color: olive; */
-}
-.new-products .inner {
-  height: 610px;
-}
-.new-products .new-products-title {
+/* TODO PRODUCT HOVER 시 변화 */
+/* NEW PRODUCTS & BEST PRODUCT */
+.product-title {
   font-size: 24px;
+  font-weight: bold;
   text-align: center;
   display: block;
   margin: 100px 0 40px;
 }
-.new-products .item__wrap {
+.product-wrap {
   display: flex;
-  background-color: olivedrab;
   justify-content: space-between;
-  margin-left: 30px;
 }
-.new-products .item__box {
-  height: 540px;
+
+/* NEW PRODUCTS */
+.new-products .inner {
+  height: 610px;
+  /* background-color: green; */
+  border-bottom: 3px solid #99999956;
 }
-.new-products .item__box .item__name,
-.new-products .item__box .item__price
- {
+.new-products .product-box {
+  width: 31.7%;
+}
+.new-products .product-box img {
+  width: 100%;
+}
+.new-products .product-box .product-info {
+  width: 100%;
+  height: calc(610px - 100%);
+}
+.new-products .product-box .product-info > h4 {
   font-size: 12px;
+  font-weight: bold;
   text-align: center;
-  display: block;
-  margin: 20px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* display: block; */
+  margin: 30px 5px;
+}
+
+/* BEST PRODUCT */
+.best-products .inner {
+  height: calc(70px + 248px);
+}
+.best-products .product-box {
+  width: 18%;
+}
+.best-products .product-box img {
+  width: 100%;
+}
+
+/* MAIN FIXED*/
+.main-fixed {
+  background-image: url("../images/main-fixed-bg.jpg");
+  /* 배경 이미지 시차효과 */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.main-fixed .inner {
+  height: 320px;
+}
+.main-fixed .main-fixed-text img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
