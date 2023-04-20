@@ -71,6 +71,13 @@ header .main-header > .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+header .main-header .btn-hamburger {
+  position: absolute;
+  left: 32px;
+  font-size: 48px;
+  display: none;
 }
 :root {
   --swiper-theme-color: #444;
@@ -417,4 +424,20 @@ img 스케일 증가시키는데 정해진 영역 밖으로 흘러넘치는 요�
 }
 .steady-sellers .product-box .product-info > h4 {
   margin: 30px 5px 0;
+}
+
+@media screen and (max-width: 767px) {
+  header .main-header .btn-hamburger {
+    display: block;
+  }
+  header .main-header .swiper {
+    display: none;
+  }
+  header .main-header .inner {
+    margin-left: 32px;
+  }
+  header .main-header .main-header-search {
+    justify-self: flex-end;
+    right: 32px;
+  }
 }
